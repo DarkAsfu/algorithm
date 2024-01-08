@@ -17,7 +17,6 @@ int dq(){
   printf("%c ", c[que[first]]);
   first++;
   return que[first - 1];
-
 }
 
 int notChecked(int n){

@@ -1,7 +1,5 @@
 #include <stdio.h>
-
-int A[10];
-
+int A[100];
 void swap(int i, int j){
   int temp = A[i];
   A[i] = A[j];
@@ -23,7 +21,6 @@ int Partition(int left, int right){
 }
 
 void QuickSort(int left, int right){
-
 	if (left < right){
 		int q = Partition(left, right);
 		QuickSort(left, q-1);
@@ -31,16 +28,18 @@ void QuickSort(int left, int right){
 	}
 }
 
-
 int main()
 {
-   for (int i = 0; i<9; i++){	
+   int n;
+   printf("Enter Number of Digit: ");
+   scanf("%d", &n);
+   for (int i = 0; i<n; i++){	
    	scanf("%d", &A[i]);
    }
 
-   QuickSort(0, 8);	
+   QuickSort(0, n-1);	
    printf("\nOutput\n");
-   for (int i = 0; i<9; i++){
+   for (int i = 0; i<n; i++){
           printf("%d ",A[i]);
        printf("\n");
    }   
